@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="card">
+    <h2>Autentificare</h2>
+    <form method="POST" action="/login">
+        <label>Email:</label>
+        <input type="email" name="email" required placeholder="ex: user@yahoo.com">
+
+        <label>Parolă:</label>
+        <input type="password" name="password" required placeholder="Parola ta">
+
+        <button type="submit">Intră în cont</button>
+    </form>
+    <p><a href="{{ url_for('forgot_password') }}">Ai uitat parola?</a></p>
+    <p>Nu ai cont? <a href="{{ url_for('register') }}">Înregistrează-te</a></p>
+</div>
+{% endblock %}

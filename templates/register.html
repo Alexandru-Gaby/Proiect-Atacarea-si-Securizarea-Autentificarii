@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<div class="card">
+    <h2>Creare cont</h2>
+    <form method="POST" action="/register">
+        <label>Email:</label>
+        <input type="email" name="email" required placeholder="ex: user@yahoo.com">
+
+        <label>Parolă:</label>
+        <input type="password" name="password" required placeholder="Introdu parola">
+
+        <button type="submit">Creează cont</button>
+    </form>
+    <p>Ai cont deja? <a href="{{ url_for('login') }}">Loghează-te</a></p>
+</div>
+{% endblock %}
